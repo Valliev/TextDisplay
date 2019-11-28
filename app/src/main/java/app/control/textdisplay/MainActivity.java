@@ -17,13 +17,24 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         Button button = findViewById(R.id.button1);
+        final Button button1 = findViewById(R.id.button2);
         final EditText edittext = findViewById(R.id.editText);
+        final EditText edittext2 = findViewById(R.id.editText2);
+        final EditText edittext3 = findViewById(R.id.editText3);
         final TextView textView = findViewById(R.id.textview);
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 textView.setText(edittext.getText());
+                edittext.setText("");
+            }
+        });
+
+        button1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                textView.setText("Ты не написал код");
             }
         });
 

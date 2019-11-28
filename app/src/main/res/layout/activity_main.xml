@@ -5,30 +5,76 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:gravity="center"
+    android:gravity="bottom"
     tools:context=".MainActivity">
 
-    <EditText
-        android:id="@+id/editText"
+    <LinearLayout
+        android:layout_width="1080px"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Text"
+            android:textSize="30sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="150px"
+        android:gravity="bottom"
+        android:orientation="horizontal">
+        <EditText
+            android:id="@+id/editText"
+            android:layout_width="680px"
+            android:layout_height="150px"
+            android:ems="10"
+            android:hint="Text"
+            android:inputType="textPersonName" />
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="400px"
+            android:layout_height="150px"
+            android:onClick="ButtonClick"
+            android:text="Преобразовать в сообщение"
+            android:textColor="@android:color/holo_blue_dark" />
+    </LinearLayout>
+
+    <LinearLayout
         android:layout_width="wrap_content"
-        android:layout_height="55dp"
-        android:layout_marginTop="100dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="bottom">
+    <EditText
+        android:id="@+id/editText2"
+        android:layout_width="504px"
+        android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
-        android:hint="Text" />
+        android:hint="Number 1" />
 
-    <TextView
-        android:id="@+id/textview"
+    <EditText
+        android:id="@+id/editText3"
+        android:layout_width="540px"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Number 2"
+        android:inputType="textPersonName" />
+    </LinearLayout>
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Your text"
-        android:textSize="30sp" />
+        android:gravity="bottom">
 
     <Button
-        android:id="@+id/button1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Button"
-        android:onClick="ButtonClick"/>
+        android:id="@+id/button2"
+        android:layout_width="match_parent"
+        android:layout_height="150px"
+        android:text="Сгенерировать число"
+        android:textColor="@android:color/holo_blue_light"/>
+    </LinearLayout>
 
 </LinearLayout>
