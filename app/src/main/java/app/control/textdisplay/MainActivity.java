@@ -9,19 +9,30 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import java.lang.Math; 
+import java.lang.*;
+
 public class MainActivity extends AppCompatActivity {
+    
+    Button button;
+    Button button1;
+    EditText edittext;
+    EditText edittext2;
+    EditText edittext3;
+    TextView textView;
+    
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_main);
-
-        Button button = findViewById(R.id.button1);
-        final Button button1 = findViewById(R.id.button2);
-        final EditText edittext = findViewById(R.id.editText);
-        final EditText edittext2 = findViewById(R.id.editText2);
-        final EditText edittext3 = findViewById(R.id.editText3);
-        final TextView textView = findViewById(R.id.textview);
+        
+        button = findViewById(R.id.button1);
+        button1 = findViewById(R.id.button2);
+        edittext = findViewById(R.id.editText);
+        edittext2 = findViewById(R.id.editText2);
+        edittext3 = findViewById(R.id.editText3);
+        textView = findViewById(R.id.textview);
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -34,7 +45,11 @@ public class MainActivity extends AppCompatActivity {
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                textView.setText("Ты не написал код");
+                int from    = Integer.parseInt(edittext1.getText());
+                int end     = Integer.parseInt(edittext2.getText());
+                
+                int random = from + (int) (Math.random() * end);
+                textView.setText(random);
             }
         });
 
