@@ -45,28 +45,34 @@ public class MainActivity extends AppCompatActivity {
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                int from    = Integer.parseInt(String.valueOf(edittext2.getText()));
-                int end     = Integer.parseInt(String.valueOf(edittext3.getText()));
+            String s1 = String.valueOf(edittext2.getText());
+            String s2 = String.valueOf(edittext3.getText());
 
+                if (s1.trim().length() != 0 && s2.trim().length() != 0){
+                    int from    = Integer.parseInt(s1);
+                    int end     = Integer.parseInt(s2);
 
-                if(from >= end) {
-                    textView.setText("Не верный диапазон");
-                } else {
-                    Random rand = new Random();
-                    int random = rand.nextInt(end) + from;// int random = from + (int) (Math.random() * end);
+                    if (from >= end) {
+                        textView.setText("Не верный диапазон");
+                    } else {
+                        Random rand = new Random();
+                        int random = rand.nextInt(end) + from;// int random = from + (int) (Math.random() * end);
 
-                    while (true) {
-                        if (random > end) {
-                            random = rand.nextInt(end) + from;
-                        } else {
-                            break;
+                        while (true) {
+                            if (random > end) {
+                                random = rand.nextInt(end) + from;
+                            } else {
+                                break;
+                            }
                         }
-                    }
 
-                    textView.setText(String.valueOf(random));
+                        textView.setText(String.valueOf(random));
+                    }
+                } else {
+                    textView.setText("Поля диапозона не заполнены!");
                 }
             }
-        });
 
+        });
     }
 }
