@@ -64,17 +64,19 @@
         android:hint="Number 2"
         android:inputType="textPersonName" />
     </LinearLayout>
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:gravity="bottom">
 
-    <Button
-        android:id="@+id/button2"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="150px"
-        android:text="Сгенерировать число"
-        android:textColor="@android:color/holo_blue_light"/>
+        android:layout_height="wrap_content"
+        android:gravity="bottom"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="match_parent"
+            android:layout_height="150px"
+            android:text="Сгенерировать число"
+            android:textColor="@android:color/holo_blue_light" />
     </LinearLayout>
 
 </LinearLayout>
