@@ -10,7 +10,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import java.lang.Math; 
-import java.lang.*;
+import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
     
@@ -45,10 +45,12 @@ public class MainActivity extends AppCompatActivity {
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                int from    = Integer.parseInt(edittext1.getText());
-                int end     = Integer.parseInt(edittext2.getText());
+                //int from    = Integer.parseInt(edittext1.getText());
+                int end     = Integer.parseInt(String.valueOf(edittext2.getText()));
                 
-                int random = from + (int) (Math.random() * end);
+                Random rand = new Random();
+                
+                int random = rand(end);
                 textView.setText(random);
             }
         });
