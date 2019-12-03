@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">TextDisplay</string>
+    <string name="text">Текст</string>>
+    <string name="buttontext">Преобразовать в сообщение</string>>
+</resources>

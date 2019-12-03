@@ -57,16 +57,8 @@ public class MainActivity extends AppCompatActivity {
                         textView.setText("Не верный диапазон");
                     } else {
                         Random rand = new Random();
-                        int random = rand.nextInt(end) + from; // int random = from + (int) (Math.random() * end);
-
-                        while (true) {
-                            if (random > end) {
-                                random = rand.nextInt(end) + from;
-                            } else {
-                                break;
-                            }
-                        }
-
+                        int dist = end -from;
+                        int random = rand.nextInt(dist + 1) + from;
                         textView.setText(String.valueOf(random));
                     }
                 } else {

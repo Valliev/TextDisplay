@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">TextDisplay</string>
+    <string name="text">Мәтін</string>>
+    <string name="buttontext">Мәтінге жасау</string>>
+</resources>
