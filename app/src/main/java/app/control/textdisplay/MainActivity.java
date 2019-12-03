@@ -11,6 +11,7 @@ import android.widget.TextView;
 
 import java.lang.*;
 import java.util.Random;
+import java.util.Scanner;
 
 public class MainActivity extends AppCompatActivity {
     
@@ -48,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
             String s1 = String.valueOf(edittext2.getText());
             String s2 = String.valueOf(edittext3.getText());
 
-                if (s1.trim().length() != 0 && s2.trim().length() != 0){
+                //if (s1.trim().length() != 0 && s2.trim().length() != 0){
                     int from    = Integer.parseInt(s1);
                     int end     = Integer.parseInt(s2);
 
@@ -56,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
                         textView.setText("Не верный диапазон");
                     } else {
                         Random rand = new Random();
-                        int random = rand.nextInt(end) + from;// int random = from + (int) (Math.random() * end);
+                        int random = rand.nextInt(end) + from; // int random = from + (int) (Math.random() * end);
 
                         while (true) {
                             if (random > end) {
