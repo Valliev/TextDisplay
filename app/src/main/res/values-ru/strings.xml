@@ -1,5 +1,6 @@
 <resources>
-    <string name="app_name">TextDisplay</string>
+    <string name="app_name">Показ текста</string>
     <string name="text">Текст</string>>
     <string name="buttontext">Преобразовать в сообщение</string>>
+    <string name="buttontext1">Сгенерировать число</string>>
 </resources>
