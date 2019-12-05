@@ -3,4 +3,8 @@
     <string name="text">Text</string>>
     <string name="buttontext">Convert to Message</string>>
     <string name="buttontext1">Generate number</string>>
+    <string name="buttontext2">Change flag</string>>
+    <string name="edittext1">Text</string>
+    <string name="edittext2">Start of range</string>
+    <string name="edittext3">End of range</string>
 </resources>

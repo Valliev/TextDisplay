@@ -3,4 +3,8 @@
     <string name="text">Мәтін</string>>
     <string name="buttontext">Мәтінге жасау</string>>
     <string name="buttontext1">Санды құрау</string>>
+    <string name="buttontext2">Жалаушаны ауыстыру</string>>
+    <string name="edittext1">Мәтін</string>
+    <string name="edittext2">Диапазонның басталуы</string>
+    <string name="edittext3">Диапазонның соңы</string>
 </resources>

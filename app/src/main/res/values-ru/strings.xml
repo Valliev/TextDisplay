@@ -3,4 +3,8 @@
     <string name="text">Текст</string>>
     <string name="buttontext">Преобразовать в сообщение</string>>
     <string name="buttontext1">Сгенерировать число</string>>
+    <string name="buttontext2">Сменить флаг</string>>
+    <string name="edittext1">Текст</string>
+    <string name="edittext2">Начало диапозона</string>
+    <string name="edittext3">Конец диапозона</string>
 </resources>

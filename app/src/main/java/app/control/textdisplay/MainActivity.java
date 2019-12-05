@@ -44,8 +44,6 @@ public class MainActivity extends AppCompatActivity {
         textView1 = findViewById(R.id.textview);
         image1 = findViewById(R.id.imageView1);
 
-
-
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -60,23 +58,20 @@ public class MainActivity extends AppCompatActivity {
                 image1.setImageDrawable(getNextImage());
             }
         });
-
-        Drawable drawable1 = getResources().getDrawable( R.drawable.i1);
-        Drawable drawable2 = getResources().getDrawable( R.drawable.i2);
-        Drawable drawable3 = getResources().getDrawable( R.drawable.i3);
+        Drawable drawable1 = getResources().getDrawable(R.drawable.i1);
+        Drawable drawable2 = getResources().getDrawable(R.drawable.i2);
+        Drawable drawable3 = getResources().getDrawable(R.drawable.i3);
         Drawable[] drawables = new Drawable[3];
         drawables[0] = drawable1;
         drawables[1] = drawable2;
         drawables[2] = drawable3;
         this.drawables = drawables;
 
-
         button2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 String s1 = String.valueOf(edittext2.getText());
                 String s2 = String.valueOf(edittext3.getText());
-
                 if (s1.trim().length() != 0 && s2.trim().length() != 0) {
                     int from = Integer.parseInt(s1);
                     int end = Integer.parseInt(s2);
@@ -85,7 +80,7 @@ public class MainActivity extends AppCompatActivity {
                         textView1.setText("Не верный диапазон");
                     } else {
                         Random rand = new Random();
-                        int dist = end -from;
+                        int dist = end - from;
                         int random = rand.nextInt(dist + 1) + from;
                         textView1.setText(String.valueOf(random));
                     }
@@ -94,7 +89,6 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
-
     }
     private Drawable getNextImage() {
         imageIndex++;
