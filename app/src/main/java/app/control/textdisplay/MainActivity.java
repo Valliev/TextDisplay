@@ -19,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
 
     Button button1;
     Button button2;
+    Button button3;
     EditText edittext1;
     EditText edittext2;
     EditText edittext3;
@@ -36,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
 
         button1 = findViewById(R.id.button1);
         button2 = findViewById(R.id.button2);
+        button3 = findViewById(R.id.button3);
         edittext1 = findViewById(R.id.editText);
         edittext2 = findViewById(R.id.editText2);
         edittext3 = findViewById(R.id.editText3);
@@ -47,10 +49,15 @@ public class MainActivity extends AppCompatActivity {
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                textView1.setText(edittext1.getText());
-//                edittext1.setText("");
-                image1.setImageDrawable(getNextImage());
+                textView1.setText(edittext1.getText());
+                edittext1.setText("");
+            }
+        });
 
+        button3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                image1.setImageDrawable(getNextImage());
             }
         });
 
